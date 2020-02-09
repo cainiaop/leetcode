@@ -21,9 +21,12 @@ func moveZeroes(nums []int)  {
 	targetIndex := 0
 	for i := 0; i < count; i++ {
 
-		if nums[i] != 0 && targetIndex != i {
-			nums[targetIndex] = nums[i]
-			nums[i] = 0
+		if nums[i] != 0 {
+			if targetIndex != i {
+				nums[targetIndex] = nums[i]
+				nums[i] = 0
+			}
+
 			targetIndex++
 		}
 	}
